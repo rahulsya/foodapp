@@ -62,19 +62,14 @@ export default function Home() {
         </ScrollView>
       </View>
       {/* items */}
-      <View>
-        <ScrollView
-          style={styles.products}
-          showsVerticalScrollIndicator={false}>
-          {/* items here */}
-          <ProductItems />
-          <ProductItems />
-          <ProductItems />
-          <ProductItems />
-          <ProductItems />
-          <ProductItems />
-        </ScrollView>
-      </View>
+      <ScrollView style={styles.products} showsVerticalScrollIndicator={false}>
+        {/* items here */}
+        <ProductItems />
+        <ProductItems />
+        <ProductItems />
+        <ProductItems />
+        <ProductItems />
+      </ScrollView>
     </View>
   );
 }
@@ -113,7 +108,7 @@ const styles = StyleSheet.create({
     paddingTop: 20,
   },
   categoryText: (color) => ({
-    fontSize: 18,
+    fontSize: 15,
     paddingRight: 25,
     color: `${color === 2 ? `#FCD34D` : `#374151`}`,
   }),

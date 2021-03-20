@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import {CartIC} from '../assets';
-import Burger from '../assets/images/burger2.jpg';
+import {CartIC, PlusIc} from '../assets';
+import Burger from '../assets/images/pizza.jpg';
 
 export default function ProductItems() {
   return (
@@ -14,7 +14,7 @@ export default function ProductItems() {
         </View>
       </View>
       <TouchableOpacity style={styles.button}>
-        <CartIC width={25} height={25} fill="#FCD34D" />
+        <PlusIc width={25} height={25} fill="#FCD34D" />
       </TouchableOpacity>
     </View>
   );
@@ -22,7 +22,7 @@ export default function ProductItems() {
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 10,
+    marginBottom: 10,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
@@ -42,10 +42,10 @@ const styles = StyleSheet.create({
   },
   title: {
     color: '#fff',
-    fontSize: 18,
+    fontSize: 16,
   },
   desc: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#FCD34D',
   },
   button: {
