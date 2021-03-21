@@ -20,6 +20,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 // components
 import Home from './pages/Home';
+import Order from './pages/Order'
 
 const Stack = createStackNavigator();
 
@@ -28,7 +29,8 @@ const App = () => {
     <>
       <NavigationContainer>
         <Stack.Navigator headerMode="none" initialRouteName="Home">
-          <Stack.Screen name="home" component={Home} />
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Order" component={Order} />
         </Stack.Navigator>
       </NavigationContainer>
     </>
