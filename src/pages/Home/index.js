@@ -1,8 +1,14 @@
 import React, {useState} from 'react';
-import {ScrollView, StyleSheet, Text, View} from 'react-native';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
 import {UserIc, BagIC} from '../../assets';
 import ProductItems from '../../components/ProductItems';
-export default function Home() {
+export default function Home({navigation}) {
   const [categories] = useState([
     {
       id: 1,
@@ -34,12 +40,14 @@ export default function Home() {
     <View style={styles.container}>
       {/* header */}
       <View style={styles.header}>
-        <View style={styles.icon}>
+        <TouchableOpacity style={styles.icon}>
           <UserIc width={20} height={20} />
-        </View>
-        <View style={styles.icon}>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.icon}
+          onPress={() => navigation.navigate('Order')}>
           <BagIC width={20} height={20} />
-        </View>
+        </TouchableOpacity>
       </View>
 
       {/* address */}
