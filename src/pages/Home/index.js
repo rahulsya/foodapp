@@ -122,5 +122,6 @@ const styles = StyleSheet.create({
   }),
   products: {
     marginTop: 10,
+    marginBottom: 10,
   },
 });
